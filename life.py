@@ -103,8 +103,7 @@ def dead_cell_logic(matrix: list[list[str]], i: int, j: int) -> str:
     Returns:
         str: "*" if cell should be alive, "-" else
     """
-    alive_neighbors = 0
-    alive_neighbors += 1 if matrix[i-1][j-1] == "*" else 0
+    alive_neighbors = 0 + (1 if matrix[i-1][j-1] == "*" else 0)
     alive_neighbors += 1 if matrix[i-1][j] == "*" else 0
     alive_neighbors += 1 if matrix[i-1][j+1] == "*" else 0
     alive_neighbors += 1 if matrix[i][j-1] == "*" else 0
@@ -130,8 +129,7 @@ def alive_cell_logic(matrix: list[list[str]], i: int, j: int) -> str:
         str: "*" if cell should be alive, "-" else
     """
 
-    alive_neighbors = 0
-    alive_neighbors += 1 if matrix[i-1][j-1] == "*" else 0
+    alive_neighbors = 0 + (1 if matrix[i-1][j-1] == "*" else 0)
     alive_neighbors += 1 if matrix[i-1][j] == "*" else 0
     alive_neighbors += 1 if matrix[i-1][j+1] == "*" else 0
     alive_neighbors += 1 if matrix[i][j-1] == "*" else 0
